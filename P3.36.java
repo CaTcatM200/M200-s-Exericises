@@ -7,15 +7,15 @@ public class P336 {
             {
                 throw new NullPointerException();
             }
-            if(alphamatrix.length != betamatrix.length)
+            if(alphamatrix.length != betamatrix.length || alphamatrix[0].length != betamatrix[0].length)
             {
                 throw new IllegalArgumentException();
             }
             int i,j;
-            int[][]resultmatrix = new int[alphamatrix.length][betamatrix.length];
+            int[][]resultmatrix = new int[alphamatrix.length][betamatrix[0].length];
             for(i=0;i < resultmatrix.length;i++)
             {
-                for(j=0;j < resultmatrix.length;j++)
+                for(j=0;j < resultmatrix[0].length;j++)
                 {
                     resultmatrix[i][j] = alphamatrix[i][j] + betamatrix[i][j];
                 }
